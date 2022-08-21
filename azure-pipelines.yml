@@ -43,3 +43,8 @@ stages:
         DockerNamespace: 'bhumitreg.azurecr.io'
         DockerRepository: 'dotnetapp'
         DockerImageTag: 'latest'
+    - task: AzureAppServiceManage@0
+      inputs:
+        azureSubscription: 'Azure Pass - Sponsorship(1)(e3c1d6a3-da6d-4532-ad39-f4e6e2d73598)'
+        Action: 'Restart Azure App Service'
+        WebAppName: 'bhumitweb'
